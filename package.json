@@ -1,0 +1,65 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "The core server of mrmihi",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "format": "prettier --write --cache \"**/*.{js,md,html}\"",
+    "lint": "eslint src --ext js,md --ignore-path .gitignore --fix --cache --report-unused-disable-directives",
+    "prepare": "lefthook install",
+    "start": "node src/app.js",
+    "test": "echo test"
+  },
+  "type": "module",
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrmihi/core.git"
+  },
+  "author": "mrmihi",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mrmihi/core/issues"
+  },
+  "homepage": "https://github.com/mrmihi/core#readme",
+  "keywords": [],
+  "dependencies": {
+    "@faker-js/faker": "8.3.1",
+    "@sliit-foss/functions": "2.2.4",
+    "@sliit-foss/http-logger": "1.1.2",
+    "@sliit-foss/module-logger": "1.1.6",
+    "@sliit-foss/service-connector": "2.0.1",
+    "bcryptjs": "2.4.3",
+    "celebrate": "15.0.3",
+    "compression": "1.7.4",
+    "cors": "2.8.5",
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "express-http-context": "1.2.4",
+    "express-rate-limit": "7.1.5",
+    "handlebars": "4.7.8",
+    "helmet": "7.1.0",
+    "http-errors": "2.0.0",
+    "jsonwebtoken": "9.0.2",
+    "lodash": "4.17.21",
+    "migrate-mongo": "11.0.0",
+    "mongoose": "8.0.3",
+    "mongoose-aggregate-paginate-v2": "1.0.6",
+    "mongoose-paginate-v2": "1.7.4",
+    "nodemailer": "6.9.7"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "18.4.3",
+    "@commitlint/config-conventional": "18.4.3",
+    "@sliit-foss/eslint-config-internal": "1.1.6",
+    "@trivago/prettier-plugin-sort-imports": "4.3.0",
+    "eslint": "8.56.0",
+    "eslint-plugin-import": "2.29.1",
+    "lefthook": "1.5.5",
+    "nodemon": "3.0.2",
+    "prettier": "3.1.1"
+  }
+}
